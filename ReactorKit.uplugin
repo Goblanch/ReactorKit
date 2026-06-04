@@ -1,0 +1,29 @@
+﻿{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "ReactorKit",
+  "Description": "Event-Condition-Action system plugin for Unreal Engine 5. Trigger. Evaluate. Act. Build anything.",
+  "Category": "Gameplay",
+  "CreatedBy": "Mirador Works",
+  "CreatedByURL": "https://github.com/Goblanch",
+  "DocsURL": "https://github.com/Goblanch/ReactorKit",
+  "MarketplaceURL": "",
+  "SupportURL": "https://github.com/Goblanch/ReactorKit/issues",
+  "CanContainContent": true,
+  "IsBetaVersion": true,
+  "IsExperimentalVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "ReactorKitCore",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "ReactorKitEditor",
+      "Type": "Editor",
+      "LoadingPhase": "PostEngineInit"
+    }
+  ]
+}
