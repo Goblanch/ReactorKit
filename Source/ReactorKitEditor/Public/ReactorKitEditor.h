@@ -5,6 +5,6 @@
 class FReactorKitEditorModule : public IModuleInterface
 {
 public:
-    virtual void StartUpModule() override;
-    virtual void ShutDownModule() override;
+    virtual void StartupModule() override;
+    virtual void ShutdownModule() override;
 };
