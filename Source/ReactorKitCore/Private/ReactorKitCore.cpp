@@ -4,12 +4,12 @@
 
 void FReactorKitCoreModule::StartupModule()
 {
-	// Core module startup — implementation coming in Sprint 1
+	UE_LOG(LogTemp, Log, TEXT("[ReactorKitCore] Module started."));
 }
 
 void FReactorKitCoreModule::ShutdownModule()
 {
-	// Core module shutdown — implementation coming in Sprint 1
+	UE_LOG(LogTemp, Log, TEXT("[ReactorKitCore] Module shut down."));
 }
 
 #undef LOCTEXT_NAMESPACE
