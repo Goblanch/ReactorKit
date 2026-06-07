@@ -1,4 +1,4 @@
-﻿#include "ReactorKitCore/Public/ReactorKitCore.h"
+﻿#include "ReactorKitCore.h"
 
 #define LOCTEXT_NAMESPACE "FReactorKitCoreModule"
 
