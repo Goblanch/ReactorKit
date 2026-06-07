@@ -63,19 +63,20 @@ public:
 	// -- Public API ---------------------------------------------------------------------------------------------------
 
 	/**
- * Registers a C++ delegate as a listener for the given event name.
- * Blueprint listeners should use OnEventDispatched instead.
- *
- * NOTE: Stub implementation — logs the call only. Full logic in Issue #10.
- *
- * @param EventName     Name of the event to listen for.
- * @param Delegate      Delegate to call when the event is dispatched.
- */
-	void RegisterListener(FName EventName, const FRKEventDelegate::FDelegate& Delegate);
+	 * Registers a C++ delegate as listener for the given event name.
+	 * Multiple delegates can be registered for the same event name.
+	 * Returns a FDelegateHandle that must be stored and passed to
+	 * UnregisterListener() to remove listener later.
+	 * 
+	 * @param EventName Name of the event to listen for.
+	 * @param Delegate Delegate to call when the event is dispatched.
+	 * @return Handle to use when unregistering this listener.
+	 */
+	FDelegateHandle RegisterListener(FName EventName, const FRKEventDelegate::FDelegate& Delegate);
 
 	/**
 	 * Unregisters a previously registered C++ delegate from the given event name.
-	 * Safe to call even if the listener was never registered.
+	 * Safe to call with an invalid handle or unknown event name - no crash, no side effects.
 	 *
 	 * NOTE: Stub implementation — logs the call only. Full logic in Issue #10.
 	 *
